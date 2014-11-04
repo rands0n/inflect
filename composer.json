@@ -5,6 +5,7 @@
     "phpunit/phpunit": "~4.3"
   },
   "license": "MIT License",
+  "homepage": "https://github.com/randsonjs/inflect",
   "authors": [
     {
       "name": "Randson Oliveira",
