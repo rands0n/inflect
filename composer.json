@@ -15,7 +15,7 @@
   "require": {},
   "autoload": {
   	"psr-0": {
-  		"Inflect\\": "src/"
+  		"Inflect": "src/"
   	}
   }
 }
