@@ -80,4 +80,15 @@ class Inflect
         'fênix'
     );
 
+    /**
+     * Singularize word
+     *
+     * @param string
+     * @return string
+     **/
+    public static function singularize($word)
+    {
+
+    }
+
 }
