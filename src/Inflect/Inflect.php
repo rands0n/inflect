@@ -67,4 +67,17 @@ class Inflect
         'país' => 'países'
     );
 
+    /**
+     * Declare uncountable words
+     *
+     * @var string
+     **/
+    static $uncountable = array(
+        'tórax',
+        'tênis',
+        'ônibus',
+        'lápis',
+        'fênix'
+    );
+
 }
