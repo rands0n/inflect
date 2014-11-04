@@ -58,4 +58,13 @@ class Inflect
         '/^(g|)ases$/i'                                      => '$1ás'
     );
 
+    /**
+     * Declare irregular word
+     *
+     * @var string
+     **/
+    static $irregular = array(
+        'país' => 'países'
+    );
+
 }
