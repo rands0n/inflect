@@ -99,7 +99,24 @@ class Inflect
      **/
     public static function singularize($word)
     {
+        if(in_array(strtolower($word), self::uncountable))
+            return $word;
 
+        foreach (self::$irregular as $result => $pattern)
+        {
+            $pattern = '/' . $pattern . '$/i';
+
+            if(preg_match($pattern, $word))
+                return preg_replace($pattern, $result, $word)
+        }
+
+        foreach(self::$singular as $pattern => $result)
+        {
+            if(preg_match($pattern, $word))
+                return preg_replace($pattern, $result, $word)
+        }
+
+        return $word;
     }
 
     /**
