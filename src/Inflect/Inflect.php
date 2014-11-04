@@ -81,6 +81,17 @@ class Inflect
     );
 
     /**
+     * Pluralize word
+     *
+     * @param string
+     * @return string
+     **/
+    public static function pluralize($word)
+    {
+
+    }
+
+    /**
      * Singularize word
      *
      * @param string
@@ -89,6 +100,17 @@ class Inflect
     public static function singularize($word)
     {
 
+    }
+
+    /**
+     * Camelize word
+     *
+     * @param string
+     * @return string
+     **/
+    public static function camelize($word)
+    {
+        return str_replace(' ', '', ucwords(strtr($word, '_-', ' ')));
     }
 
 }
