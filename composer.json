@@ -11,5 +11,10 @@
       "email": "randsonjs@gmail.com"
     }
   ],
-  "require": {}
+  "require": {},
+  "autoload": {
+  	"psr-0": {
+  		"Inflect\\": "src/"
+  	}
+  }
 }
