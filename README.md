@@ -2,6 +2,8 @@
 
 A PHP class to handle words in Portuguese
 
+## Dependencies
+
 ## How it works?
 
 ## First Steps
