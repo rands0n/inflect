@@ -11,4 +11,4 @@ A PHP class to handle words in Portuguese
 ## Contributing
 
 ## License
-[MIT License] © Randson Oliveira
+[MIT License](./LICENSE) © Randson Oliveira
