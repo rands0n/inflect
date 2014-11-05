@@ -47,8 +47,6 @@ Run command to install it.
 $ composer install
 ```
 
-## First Steps
-
 ## File Structure
 
 ```
