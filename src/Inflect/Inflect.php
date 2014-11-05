@@ -99,7 +99,7 @@ class Inflect
      **/
     public static function singularize($word)
     {
-        if(in_array(strtolower($word), self::uncountable))
+        if(in_array(strtolower($word), self::$uncountable))
             return $word;
 
         foreach (self::$irregular as $result => $pattern)
