@@ -88,7 +88,24 @@ class Inflect
      **/
     public static function pluralize($word)
     {
+        if(in_array(strtolower($word), self::$uncountable))
+            return $word;
 
+        foreach(self::$irregular as $pattern => $result)
+        {
+            $pattern = '/' . $pattern . '$/i';
+
+            if(preg_match($pattern, $word))
+                return preg_replace($pattern, $result, $word);
+        }
+
+        foreach(self::$plural as $pattern => $result)
+        {
+            if(preg_match($pattern, $result))
+                return preg_replace($pattern, $result, $word)
+        }
+
+        return $word;
     }
 
     /**
