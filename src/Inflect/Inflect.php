@@ -142,9 +142,12 @@ class Inflect
      * @param string
      * @return string
      **/
-    public static function camelize($string)
+    public static function camelize($string, $uppercase_first_letter = false)
     {
-        return str_replace(' ', '', ucwords(strtr($string, '_-', ' ')));
+        if($uppercase_first_letter)
+            return str_replace(' ', '', ucwords(strtr($string, '_-', ' ')));
+
+        return str_replace(' ', '', lcfirst(strtr($string, '_-', ' ')));
     }
 
 }
