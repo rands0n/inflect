@@ -26,6 +26,27 @@ Inflect::camelize('tablename');           // TableName
 Inflect::camelize('tablename', true);     // tableName
 ```
 
+## Instalation
+
+The recommended way to install this package is through [composer](http://getcomposer.org).
+
+Create a `composer.json` file.
+
+```json
+{
+    "minimum-stability": "dev",
+    "require": {
+        "randsonjs/inflect": "*"
+    }
+}
+```
+
+Run command to install it.
+
+```sh
+$ composer install
+```
+
 ## First Steps
 
 ## File Structure
