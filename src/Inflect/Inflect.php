@@ -86,26 +86,26 @@ class Inflect
      * @param string
      * @return string
      **/
-    public static function pluralize($word)
+    public static function pluralize($string)
     {
-        if(in_array(strtolower($word), self::$uncountable))
-            return $word;
+        if(in_array(strtolower($string), self::$uncountable))
+            return $string;
 
         foreach(self::$irregular as $pattern => $result)
         {
             $pattern = '/' . $pattern . '$/i';
 
-            if(preg_match($pattern, $word))
-                return preg_replace($pattern, $result, $word);
+            if(preg_match($pattern, $string))
+                return preg_replace($pattern, $result, $string);
         }
 
         foreach(self::$plural as $pattern => $result)
         {
             if(preg_match($pattern, $result))
-                return preg_replace($pattern, $result, $word)
+                return preg_replace($pattern, $result, $string)
         }
 
-        return $word;
+        return $string;
     }
 
     /**
@@ -114,26 +114,26 @@ class Inflect
      * @param string
      * @return string
      **/
-    public static function singularize($word)
+    public static function singularize($string)
     {
-        if(in_array(strtolower($word), self::$uncountable))
-            return $word;
+        if(in_array(strtolower($string), self::$uncountable))
+            return $string;
 
         foreach (self::$irregular as $result => $pattern)
         {
             $pattern = '/' . $pattern . '$/i';
 
-            if(preg_match($pattern, $word))
-                return preg_replace($pattern, $result, $word)
+            if(preg_match($pattern, $string))
+                return preg_replace($pattern, $result, $string)
         }
 
         foreach(self::$singular as $pattern => $result)
         {
-            if(preg_match($pattern, $word))
-                return preg_replace($pattern, $result, $word)
+            if(preg_match($pattern, $string))
+                return preg_replace($pattern, $result, $string)
         }
 
-        return $word;
+        return $string;
     }
 
     /**
@@ -142,9 +142,9 @@ class Inflect
      * @param string
      * @return string
      **/
-    public static function camelize($word)
+    public static function camelize($string)
     {
-        return str_replace(' ', '', ucwords(strtr($word, '_-', ' ')));
+        return str_replace(' ', '', ucwords(strtr($string, '_-', ' ')));
     }
 
 }
