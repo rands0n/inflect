@@ -1,5 +1,8 @@
 # Inflect
 
+[![MIT License](http://img.shields.io/badge/license-MIT-red.svg)](./LICENSE)
+[![Composer Version](http://img.shields.io/badge/composer-v1.0--dev-orange.svg)](http://getcomposer.org)
+
 A PHP class to handle words in Portuguese
 
 ## Dependencies
