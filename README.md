@@ -4,6 +4,9 @@ A PHP class to handle words in Portuguese
 
 ## Dependencies
 
+1. Install [PHP](http://php.net/downloads) if you don't have it yet.
+2. Install [Composer](http://getcomposer.org) if you don't have it yet.
+
 ## How it works?
 
 ## First Steps
