@@ -10,6 +10,8 @@ A PHP class to handle words in Portuguese
 
 ## File Structure
 
+## Credits
+
 ## Contributing
 
 1. Fork it!
