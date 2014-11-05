@@ -9,10 +9,21 @@ A PHP class to handle words in Portuguese
 
 ## Usage
 
+Examples of usage of the Inflect(i.e portuguese).
+
 ```php
+<?php
+
 use Inflect\Inflect;
 
-Inflect::method_name('string to handle');
+Inflect::pluralize('pão');                // pães
+Inflect::pluralize('carro');              // carros
+
+Inflect::singularize('carros');           // carro
+Inflect::singularize('pães');             // pão
+
+Inflect::camelize('tablename');           // TableName
+Inflect::camelize('tablename', true);     // tableName
 ```
 
 ## First Steps
