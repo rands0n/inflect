@@ -26,7 +26,7 @@ Inflect::camelize('tablename');           // TableName
 Inflect::camelize('tablename', true);     // tableName
 ```
 
-## Instalation
+## Installation
 
 The recommended way to install this package is through [composer](http://getcomposer.org).
 
