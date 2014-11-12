@@ -84,8 +84,6 @@ List of files that we don't want Git to track.
 Specify all dependencies loaded via Composer.
 > Check [composer.json](https://getcomposer.org/doc/01-basic-usage.md#composer-json-project-setup) Project Setup for more details.
 
-## Credits
-
 ## Contributing
 
 1. Fork it!
