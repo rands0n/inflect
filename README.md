@@ -17,16 +17,30 @@ Examples of usage of the Inflect(i.e portuguese).
 ```php
 <?php
 
-use Inflect\Inflect;
+use Inflect\Inflect
 
-Inflect::pluralize('pão');                // pães
-Inflect::pluralize('carro');              // carros
+$inflector = new Inflect;
 
-Inflect::singularize('carros');           // carro
-Inflect::singularize('pães');             // pão
+$inflector->pluralize('pão');            // pães
+$inflector->pluralize('carro');          // carros
 
-Inflect::camelize('tablename');           // TableName
-Inflect::camelize('tablename', true);     // tableName
+$inflector->singularize('carros');       // carro
+$inflector->singularize('pães');         // pão
+
+$inflector->camelize('tablename');       // TableName
+$inflector->camelize('tablename', true); // tableName
+```
+
+You can also use it without instantiating the object trought the `Facade` class
+
+```php
+<?php
+
+use Inflect\Facade as Inflect; // Use facade to be able to do static calls
+
+Inflect::pluralize('carro');          // carros
+Inflect::singularize('carros');       // carro
+Inflect::camelize('tablename');       // TableName
 ```
 
 ## Installation
