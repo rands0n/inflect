@@ -3,7 +3,7 @@
 namespace Inflect;
 
 /**
- * This is a helper class that allows the usage of the Inflect\Inflect trought
+ * This is a helper class that allows the usag of the Inflect\Inflect trought
  * static calls
  *
  * @example
@@ -21,7 +21,7 @@ class Facade
      *
      * @return Inflect
      */
-    protected function getInflector()
+    protected static function getInflector()
     {
         if (!self::$inflector) {
             self::$inflector = new Inflect;
@@ -39,7 +39,7 @@ class Facade
      */
     public static function __callStatic($method, $args)
     {
-        $instance = $this->getInflector();
+        $instance = self::getInflector();
 
         switch (count($args))
         {
