@@ -88,21 +88,22 @@ class Inflect
      **/
     public static function pluralize($string)
     {
-        if(in_array(strtolower($string), self::$uncountable))
+        if (in_array(strtolower($string), self::$uncountable)) {
             return $string;
-
-        foreach(self::$irregular as $pattern => $result)
-        {
-            $pattern = '/' . $pattern . '$/i';
-
-            if(preg_match($pattern, $string))
-                return preg_replace($pattern, $result, $string);
         }
 
-        foreach(self::$plural as $pattern => $result)
-        {
-            if(preg_match($pattern, $result))
-                return preg_replace($pattern, $result, $string)
+        foreach (self::$irregular as $pattern => $result) {
+            $pattern = '/' . $pattern . '$/i';
+
+            if (preg_match($pattern, $string)) {
+                return preg_replace($pattern, $result, $string);
+            }
+        }
+
+        foreach (self::$plural as $pattern => $result) {
+            if (preg_match($pattern, $result)) {
+                return preg_replace($pattern, $result, $string);
+            }
         }
 
         return $string;
@@ -116,21 +117,22 @@ class Inflect
      **/
     public static function singularize($string)
     {
-        if(in_array(strtolower($string), self::$uncountable))
+        if (in_array(strtolower($string), self::$uncountable)) {
             return $string;
-
-        foreach (self::$irregular as $result => $pattern)
-        {
-            $pattern = '/' . $pattern . '$/i';
-
-            if(preg_match($pattern, $string))
-                return preg_replace($pattern, $result, $string)
         }
 
-        foreach(self::$singular as $pattern => $result)
-        {
-            if(preg_match($pattern, $string))
-                return preg_replace($pattern, $result, $string)
+        foreach (self::$irregular as $result => $pattern) {
+            $pattern = '/' . $pattern . '$/i';
+
+            if (preg_match($pattern, $string)) {
+                return preg_replace($pattern, $result, $string);
+            }
+        }
+
+        foreach (self::$singular as $pattern => $result) {
+            if (preg_match($pattern, $string)) {
+                return preg_replace($pattern, $result, $string);
+            }
         }
 
         return $string;
@@ -144,8 +146,9 @@ class Inflect
      **/
     public static function camelize($string, $uppercase_first_letter = false)
     {
-        if($uppercase_first_letter)
+        if ($uppercase_first_letter) {
             return str_replace(' ', '', ucwords(strtr($string, '_-', ' ')));
+        }
 
         return str_replace(' ', '', lcfirst(strtr($string, '_-', ' ')));
     }
