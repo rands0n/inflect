@@ -2,6 +2,11 @@
 
 namespace Inflect;
 
+/**
+ * Handle words in Portuguese
+ *
+ * @package Inflect
+ */
 class Inflect
 {
 
@@ -86,7 +91,7 @@ class Inflect
      * @param string
      * @return string
      **/
-    public static function pluralize($string)
+    public function pluralize($string)
     {
         if (in_array(strtolower($string), self::$uncountable)) {
             return $string;
@@ -115,7 +120,7 @@ class Inflect
      * @param string
      * @return string
      **/
-    public static function singularize($string)
+    public function singularize($string)
     {
         if (in_array(strtolower($string), self::$uncountable)) {
             return $string;
@@ -144,7 +149,7 @@ class Inflect
      * @param string
      * @return string
      **/
-    public static function camelize($string, $uppercase_first_letter = false)
+    public function camelize($string, $uppercase_first_letter = false)
     {
         if ($uppercase_first_letter) {
             return str_replace(' ', '', ucwords(strtr($string, '_-', ' ')));
