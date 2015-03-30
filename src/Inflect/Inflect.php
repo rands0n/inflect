@@ -42,7 +42,6 @@ class Inflect
      * @var string
      **/
     static $singular = array(
-        '/([^ê])s$/i'                                        => '$1',
         '/^(á|gá|paí)s$/i'                                   => '$1s',
         '/(r|z)es$/i'                                        => '$1',
         '/([^p])ais$/i'                                      => '$1al',
@@ -60,7 +59,8 @@ class Inflect
         '/ões$/i'                                            => 'ão',
         '/oes$/i'                                            => 'ao',
         '/(japon|escoc|ingl|dinamarqu|fregu|portugu)eses$/i' => '$1ês',
-        '/^(g|)ases$/i'                                      => '$1ás'
+        '/^(g|)ases$/i'                                      => '$1ás',
+        '/([^ê])s$/i'                                        => '$1'
     );
 
     /**
