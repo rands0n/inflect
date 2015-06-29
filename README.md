@@ -49,7 +49,7 @@ The recommended way to install this package is through [composer](http://getcomp
 
 Create a `composer.json` file.
 
-```json
+```js
 {
     "minimum-stability": "dev",
     "require": {
@@ -66,7 +66,7 @@ $ composer install
 
 ## File Structure
 
-```
+```sh
 .
 |-- src/
 |-- tests/
