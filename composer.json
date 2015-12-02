@@ -1,15 +1,15 @@
 {
-    "name": "randsonjs/inflect",
+    "name": "rands0n/inflect",
     "description": "A PHP class to handle words in Portuguese",
     "type": "package",
     "require-dev": {
         "phpunit/phpunit": "~4.3"
     },
     "license": "MIT License",
-    "homepage": "https://github.com/randsonjs/inflect",
+    "homepage": "https://github.com/rands0n/inflect",
     "authors": [{
         "name": "Randson Oliveira",
-        "email": "randsonjs@gmail.com"
+        "email": "me@rands0n.com"
     }],
     "require": {},
     "autoload": {
