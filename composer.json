@@ -1,5 +1,5 @@
 {
-    "name": "rands0n/inflect",
+    "name": "randsonjs/inflect",
     "description": "A PHP class to handle words in Portuguese",
     "type": "package",
     "require-dev": {
