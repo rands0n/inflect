@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/randsonjs/inflect.png?label=ready&title=Ready)](https://waffle.io/randsonjs/inflect)
 # Inflect
 
 [![MIT License](http://img.shields.io/badge/license-MIT-red.svg)](./LICENSE)
